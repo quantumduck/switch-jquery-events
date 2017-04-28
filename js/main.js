@@ -1,14 +1,19 @@
 $(function() {
-  var status = $('.status').first();
-  var originalText = status.text();
-  var lightSwitch = $('.button').
-  status.text('Ready to go!');
 
-  setTimeout(function() {
-    $('.status').first().text(originalText);
-  }, 500);
+  flashMessage('Ready to go!');
+  var lightSwitch = $('.switch').first();
+  lightSwitch.on('click', function() {
+    window.alert('The switch was clicked!')
+  });
+
+
 });
 
-function throwTheSwitch() {
-
+function flashMessage(message) {
+  var status = $('.status').first();
+  var originalText = status.text();
+  status.text(message);
+  setTimeout(function() {
+    status.text(originalText);
+  }, 500);
 }
