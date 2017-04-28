@@ -5,12 +5,14 @@ $(function() {
   lightSwitch.on('click', function() {
     // window.alert('The switch was clicked!')
     if (lightSwitch.hasClass('on')) {
-      lightSwitch.removeClass('off');
+      lightSwitch.removeClass('on');
       lightSwitch.addClass('off');
     } else if (lightSwitch.hasClass('off')) {
       lightSwitch.removeClass('off');
       lightSwitch.addClass('on');
     }
+
+    $('body').toggleClass('dark', 'light');
 
   });
 
