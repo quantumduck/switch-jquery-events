@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   var status = $('.status').first();
   var originalText = status.text();
   status.text('Ready to go!');
